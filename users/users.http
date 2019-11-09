@@ -1,0 +1,26 @@
+@url = http://localhost:4000
+
+### POST '/' - no req.body
+POST {{url}}/users
+Content-Type: application/json
+
+{}
+
+### POST '/' - invalid req.body
+POST {{url}}/users
+Content-Type: application/json
+
+{
+    "incorrectKeyName": "potato"
+}
+
+### POST '/' - successful request
+POST {{url}}/users
+Content-Type: application/json
+
+{
+    "name": "kiwi"
+}
+
+
+
